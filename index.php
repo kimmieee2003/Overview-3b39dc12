@@ -38,15 +38,13 @@ try {
 </tr>
     <?php 
     
-    $file ='import.sql';
+    $file = 'import.sql';
     $stmt = $dbh->query('SELECT title, rating FROM series');
-    while ($row = $stmt->fetch())
-    {
-        echo '<tr><td>' . $row['title'] . '</td><td>' . $row['rating'] . '</td></tr>\n';
-        
+    while ($row = $stmt->fetch()) {
+        echo '<tr><td>' . $row['title'] . '</td><td>' . $row['rating'] . '</td></tr>\n'; 
     }
     
-?>
+    ?>
 </table>
     <h2>Films</h2>
     <table style="width:50%">
@@ -55,12 +53,11 @@ try {
   <td>Duur</td>
 
 <?php 
-    $file ='import.sql';
+    $file = 'import.sql';
     $stmt = $dbh->query('SELECT naam, duur_minuten FROM films');
-    while ($row = $stmt->fetch())
-    {
+while ($row = $stmt->fetch()) {
         echo '<tr><td>' . $row['naam'] . '</td><td>' . $row['duur_minuten'] . '</td></tr>\n';
-    }
+}
 ?>
 </table>
 </body>
